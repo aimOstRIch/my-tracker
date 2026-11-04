@@ -44,7 +44,8 @@ export function SignUpForm({
         email,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/protected`,
+          // ИЗМЕНЕНО ЗДЕСЬ: теперь редирект идет на обработчик, а затем на главную (/)
+          emailRedirectTo: `${window.location.origin}/auth/confirm?next=/`,
         },
       });
       if (error) throw error;
