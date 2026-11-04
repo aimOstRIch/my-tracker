@@ -201,7 +201,7 @@ export default function TrackerPage() {
   const month = currentDate.getMonth()
   const daysInMonth = new Date(year, month + 1, 0).getDate()
   const firstDayOfMonth = new Date(year, month, 1).getDay()
-  const startDayOffset = firstDayOfMonth === 0 ? 6 : firstDayOffset(day => day) - 1 // Хак для TS, просто firstDayOfMonth - 1
+  const startDayOffset = firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1 // Хак для TS, просто firstDayOfMonth - 1
 
   const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
   const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
